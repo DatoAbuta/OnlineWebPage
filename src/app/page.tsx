@@ -6,6 +6,7 @@ import { CourseHeader } from "./components/organisms/HeaderComponent";
 import { CourseDetailsList } from "./components/organisms/DetailList";
 import { IconsSection } from "./components/organisms/IconsSection";
 import { FooterButtons } from "./components/organisms/FooterComponent";
+import { motion } from "framer-motion";
 
 export default function AnimationDiv() {
   const [isHovered, setIsHovered] = useState(false);
@@ -33,15 +34,16 @@ export default function AnimationDiv() {
         <FooterButtons />
       </section>
 
-      <div
-        className={`absolute bottom-0 left-0  w-full h-full transition-all duration-1000 ease-in-out z-10 ${
+      <motion.div
+        className={`absolute bottom-0 left-0 w-full h-full transition-all duration-1000 ease-in-out z-10 ${
           isHovered ? "clip-path-full" : "clip-path-initial"
         }`}
+        transition={{ duration: 0.3 }}
         style={{
           backgroundColor: "white",
           clipPath: isHovered
             ? "polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%)"
-            : "polygon(100% 100%, 66% 46%, 74% 100%)",
+            : "polygon(68% 49%, 89% 83%, 100% 100%, 76% 100%)",
         }}
       />
     </section>
