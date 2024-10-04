@@ -2,16 +2,16 @@ import React from "react";
 
 export const CourseDetailsList = () => {
   return (
-    <nav>
-      <ul className="list-disc pl-4 text-[20px] leading-normal font-normal duration-500">
-        <li>დამოუკიდებლად დიზაინის გადახედვა და მისი მარქაფის აწყობა</li>
-        <li>ფუნქციების დამატება და საიტების აწყობა დინამიურად</li>
-        <li>React Js-ით ნებისმიერი საიტის აწყობა</li>
-        <li>კოდის წერის პრაქტიკები</li>
-        <li>მონაცემთა ბაზებთან მუშაობა</li>
-        <li>Next Js Framework-ის ინტეგრაცია</li>
-        <li>ტესტირება და სხვა</li>
+    <section>
+      <ul className="pl-5 list-disc text-lg leading-relaxed font-light transition-all">
+        <li>დიზაინის გადახედვა და მარქაფის დამოუკიდებელი აწყობა</li>
+        <li>ფუნქციონალის დამატება და საიტების დინამიური შექმნა</li>
+        <li>React.js-ის გამოყენებით საიტების შექმნა</li>
+        <li>კოდის წერის საუკეთესო პრაქტიკები</li>
+        <li>მონაცემთა ბაზებთან კომუნიკაცია</li>
+        <li>Next.js-ის ჩართვა პროექტში</li>
+        <li>ტესტირება და დამატებითი პროცედურები</li>
       </ul>
-    </nav>
+    </section>
   );
 };
