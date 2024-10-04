@@ -35,15 +35,23 @@ export default function InteractiveSection() {
       </div>
 
       <motion.div
-        className={`absolute inset-0 transition-all duration-1000 ease-in-out z-10 ${
-          isHovered ? "clip-path-full" : "clip-path-initial"
-        }`}
-        transition={{ duration: 0.3 }}
+        className={`absolute inset-0 transition-all duration-500 ease-in-out z-10`}
+        initial={{ clipPath: "polygon(69% 47%, 100% 91%, 100% 100%, 78% 100%)" }}
+        animate={{
+          clipPath: isHovered
+            ? [
+                "polygon(69% 47%, 100% 91%, 100% 100%, 78% 100%)",
+                "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+              ]
+            : "polygon(69% 47%, 100% 91%, 100% 100%, 78% 100%)",
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.65, 0, 0.35, 1]
+        }}
         style={{
           backgroundColor: "white",
-          clipPath: isHovered
-            ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
-            : "polygon(65% 49%, 86% 80%, 100% 100%, 75% 100%)",
         }}
       />
     </section>
